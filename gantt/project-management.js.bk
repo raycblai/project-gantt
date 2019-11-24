@@ -27,8 +27,8 @@ Highcharts.ganttChart('project-management-gantt-chart', {
           name: 'Formulating the belief',
           id: 'Phase-1A',
           parent: 'assignment-1',
-          start: Date.UTC(2019, 10, 1),
-          end: Date.UTC(2019, 10, 14),
+          start: today - 2 * day,
+          end: today + 6 * day,
           completed: {
             amount: 0.2
           },
@@ -39,8 +39,8 @@ Highcharts.ganttChart('project-management-gantt-chart', {
           id: 'Phase-1B',
           dependency: 'Phase-1A',
           parent: 'assignment-1',
-          start: Date.UTC(2019, 10, 15),
-          end: Date.UTC(2019, 10, 23),
+          start: today + 6 * day,
+          end: today + 8 * day,
           owner: 'Ray'
         },
         {
@@ -48,8 +48,8 @@ Highcharts.ganttChart('project-management-gantt-chart', {
           id: 'Phase-1C',
           dependency: 'Phase-1B',
           parent: 'assignment-1',
-          start: Date.UTC(2019, 11, 1),
-          end: Date.UTC(2019, 11, 14),
+          start: today + 9.5 * day,
+          milestone: true,
           owner: 'Ray'
         },
         {
@@ -57,7 +57,6 @@ Highcharts.ganttChart('project-management-gantt-chart', {
           id: 'Phase-1D',
           dependency: 'Phase-1C',
           parent: 'assignment-1',
-          milestone: true,
           owner: 'Ray'
         },
         {
